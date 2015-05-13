@@ -45,7 +45,7 @@ ZSH_THEME="bruce"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx python)
+plugins=(git osx brew python sublime)
 
 # User configuration
 
@@ -79,6 +79,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export TERM="xterm-256color"
+
 export EDITOR="vim"
 bindkey -v
 bindkey '^R' history-incremental-search-backward
@@ -92,5 +94,4 @@ export HOMEBREW_GITHUB_API_TOKEN=3b4114902391dc36541c29dcd896d7149d977442
 export CC=cc
 export LC_ALL=en_US.UTF-8
 
-alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias macdown='/Users/bruce/Applications/MacDown.app/Contents/SharedSupport/bin/macdown'
