@@ -96,6 +96,7 @@ export CC=cc
 export LC_ALL=en_US.UTF-8
 
 alias macdown='/Users/bruce/Applications/MacDown.app/Contents/SharedSupport/bin/macdown'
+alias cd..='cd ..'
 
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
