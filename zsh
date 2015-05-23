@@ -46,7 +46,8 @@ ZSH_THEME="bruce"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git osx brew python sublime tmux docker gem npm node pip ruby vagrant \
-	virtualenv virtualenvwrapper)
+	virtualenv virtualenvwrapper brew-cask common-aliases httpie \
+	web-search urltools encode64)
 
 # User configuration
 
@@ -96,7 +97,7 @@ export CC=cc
 export LC_ALL=en_US.UTF-8
 
 alias macdown='/Users/bruce/Applications/MacDown.app/Contents/SharedSupport/bin/macdown'
-alias cd..='cd ..'
+alias md=macdown
 
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
