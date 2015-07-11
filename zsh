@@ -99,10 +99,15 @@ export LC_ALL=en_US.UTF-8
 alias macdown='/Users/bruce/Applications/MacDown.app/Contents/SharedSupport/bin/macdown'
 alias md=macdown
 alias ipynb='ipython notebook'
+alias ipynb-julia='ipynb --profile=julia'
+alias ipynb-pyspark='ipynb --profile=pyspark'
 
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
 source /usr/local/bin/virtualenvwrapper_lazy.sh
+
+export SPARK_HOME="/usr/local/Cellar/apache-spark/1.4.0"
+export PYSPARK_SUBMIT_ARGS="--master local[2]"
 
 export DOCKER_HOST=tcp://192.168.99.100:2376
 export DOCKER_CERT_PATH=/Users/bruce/.docker/machine/machines/dev
