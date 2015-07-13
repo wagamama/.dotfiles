@@ -47,7 +47,7 @@ ZSH_THEME="bruce"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git osx brew python sublime tmux docker gem npm node pip ruby vagrant \
 	virtualenv virtualenvwrapper brew-cask common-aliases httpie \
-	web-search urltools encode64)
+	web-search urltools encode64 atom)
 
 # User configuration
 
@@ -96,8 +96,6 @@ export HOMEBREW_GITHUB_API_TOKEN=3b4114902391dc36541c29dcd896d7149d977442
 export CC=cc
 export LC_ALL=en_US.UTF-8
 
-alias macdown='/Users/bruce/Applications/MacDown.app/Contents/SharedSupport/bin/macdown'
-alias md=macdown
 alias ipynb='ipython notebook'
 alias ipynb-julia='ipynb --profile=julia'
 alias ipynb-pyspark='ipynb --profile=pyspark'
