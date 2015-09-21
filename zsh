@@ -110,3 +110,5 @@ export PYSPARK_SUBMIT_ARGS="--master local[2]"
 export DOCKER_HOST=tcp://192.168.99.100:2376
 export DOCKER_CERT_PATH=/Users/bruce/.docker/machine/machines/dev
 export DOCKER_TLS_VERIFY=1
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
