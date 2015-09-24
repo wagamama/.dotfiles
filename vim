@@ -25,7 +25,7 @@ set t_Co=256
 set background=dark
 colorscheme solarized
 nnoremap / /\v
-inoremap / /\v
+vnoremap / /\v
 set ignorecase
 set smartcase
 set gdefault
