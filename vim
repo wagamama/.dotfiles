@@ -48,6 +48,7 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
+vnoremap // y/<c-r>"<cr>
 noremap <leader>y "*y
 noremap <leader>yy "*Y
 noremap <leader>p :set paste<cr>:put  *<cr>:set nopaste<cr>
