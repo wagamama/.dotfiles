@@ -45,9 +45,9 @@ ZSH_THEME="bruce"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx brew python sublime tmux docker gem npm node pip ruby vagrant \
+plugins=(git osx brew python tmux docker gem npm node pip ruby vagrant \
 	virtualenv virtualenvwrapper brew-cask common-aliases httpie \
-	web-search urltools encode64 atom)
+	web-search urltools encode64)
 
 # User configuration
 
@@ -92,12 +92,11 @@ bindkey '^N' history-search-forward
 
 setopt AUTO_CD
 
-export HOMEBREW_GITHUB_API_TOKEN=3b4114902391dc36541c29dcd896d7149d977442
+export HOMEBREW_GITHUB_API_TOKEN=dbc7f31795d0966e9bf517269ffb962f83835514
 export CC=cc
 export LC_ALL=en_US.UTF-8
 
 alias ipynb='ipython notebook'
-alias ipynb-julia='ipynb --profile=julia'
 alias ipynb-pyspark='ipynb --profile=pyspark'
 
 export WORKON_HOME=$HOME/.virtualenvs
@@ -108,7 +107,8 @@ export SPARK_HOME="/usr/local/Cellar/apache-spark/1.4.0"
 export PYSPARK_SUBMIT_ARGS="--master local[2]"
 
 export DOCKER_HOST=tcp://192.168.99.100:2376
-export DOCKER_CERT_PATH=/Users/bruce/.docker/machine/machines/dev
+export DOCKER_CERT_PATH=/Users/bruce/.docker/machine/machines/default
 export DOCKER_TLS_VERIFY=1
+export DOCKER_MACHINE_NAME="default"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

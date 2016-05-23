@@ -2,6 +2,8 @@ filetype off
 call pathogen#infect()
 filetype plugin indent on
 syntax on
+autocmd vimenter * NERDTree | wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 set nocompatible
 set modelines=0
 set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
@@ -53,6 +55,7 @@ vnoremap // y/<c-r>"<cr>
 noremap <leader>y "*y
 noremap <leader>yy "*Y
 noremap <leader>p :set paste<cr>:put  *<cr>:set nopaste<cr>
+nnoremap <c-n> :NERDTreeToggle<cr>
 
 " Vimscript file settings ----------------------- {{{
 augroup filetype_vim
