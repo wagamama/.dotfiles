@@ -46,13 +46,12 @@ ZSH_THEME="bruce"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git osx brew python tmux docker gem npm node pip ruby vagrant \
-	virtualenv virtualenvwrapper brew-cask common-aliases httpie \
-	web-search urltools encode64)
+	virtualenv virtualenvwrapper brew-cask common-aliases)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
- export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$HOME/gstreamer/cerbero/build/dist/darwin_x86_64/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+ export MANPATH="$HOME/gstreamer/cerbero/build/dist/darwin_x86_64/man:/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
