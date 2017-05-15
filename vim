@@ -1,11 +1,22 @@
-filetype off
-call pathogen#infect()
-filetype plugin indent on
 syntax on
+
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/nerdtree'
+Plugin 'xolox/vim-misc'
+
+call vundle#end()
+filetype plugin indent on
+
 autocmd stdinreadpre * let s:std_in=1
 autocmd vimenter * if (argc() == 0 && !exists("s:std_in")) | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-set nocompatible
 set modelines=0
 set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 set encoding=utf-8
@@ -26,6 +37,7 @@ set relativenumber
 set undofile
 set t_Co=256
 set background=dark
+let g:solarized_termcolor=256
 colorscheme solarized
 nnoremap / /\v
 vnoremap / /\v

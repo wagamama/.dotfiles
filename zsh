@@ -50,8 +50,8 @@ plugins=(git osx brew python tmux docker gem npm node pip ruby vagrant \
 
 # User configuration
 
-export PATH="$HOME/gstreamer/cerbero/build/dist/darwin_x86_64/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
- export MANPATH="$HOME/gstreamer/cerbero/build/dist/darwin_x86_64/man:/usr/local/man:$MANPATH"
+export PATH="$HOME/gst/cerbero/build/dist/darwin_x86_64/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+ export MANPATH="$HOME/gst/cerbero/build/dist/darwin_x86_64/man:/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,5 +109,7 @@ export DOCKER_HOST=tcp://192.168.99.100:2376
 export DOCKER_CERT_PATH=/Users/bruce/.docker/machine/machines/default
 export DOCKER_TLS_VERIFY=1
 export DOCKER_MACHINE_NAME="default"
+
+export K2PDFOPT="-ui- -dev k2 -m 1 -x -o %s_kindle -ow 10"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
