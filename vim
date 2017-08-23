@@ -10,6 +10,9 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/nerdtree'
 Plugin 'xolox/vim-misc'
+Plugin 'mileszs/ack.vim'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'Tagbar'
 
 call vundle#end()
 filetype plugin indent on
@@ -69,6 +72,7 @@ noremap <leader>y "*y
 noremap <leader>yy "*Y
 noremap <leader>p :set paste<cr>:put  *<cr>:set nopaste<cr>
 nnoremap <c-n> :NERDTreeToggle<cr>
+nnoremap <leader>n :TagbarToggle<cr>
 
 " Vimscript file settings ----------------------- {{{
 augroup filetype_vim

@@ -45,7 +45,7 @@ ZSH_THEME="bruce"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx brew python tmux docker gem npm node pip ruby vagrant \
+plugins=(git svn osx brew python tmux docker gem npm node pip ruby vagrant \
 	virtualenv virtualenvwrapper brew-cask common-aliases)
 
 # User configuration
@@ -96,19 +96,10 @@ export CC=cc
 export LC_ALL=en_US.UTF-8
 
 alias ipynb='ipython notebook'
-alias ipynb-pyspark='ipynb --profile=pyspark'
 
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
 source /usr/local/bin/virtualenvwrapper_lazy.sh
-
-export SPARK_HOME="/usr/local/Cellar/apache-spark/1.4.0"
-export PYSPARK_SUBMIT_ARGS="--master local[2]"
-
-export DOCKER_HOST=tcp://192.168.99.100:2376
-export DOCKER_CERT_PATH=/Users/bruce/.docker/machine/machines/default
-export DOCKER_TLS_VERIFY=1
-export DOCKER_MACHINE_NAME="default"
 
 export K2PDFOPT="-ui- -dev k2 -m 1 -x -o %s_kindle -ow 10"
 
