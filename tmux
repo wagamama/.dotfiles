@@ -1,6 +1,3 @@
-set -g default-terminal "screen-256color"
-set -g default-command "reattach-to-user-namespace -l zsh"
-
 unbind C-b
 set-option -g prefix C-a
 bind-key C-a send-prefix
