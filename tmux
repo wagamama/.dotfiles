@@ -1,11 +1,11 @@
 set -g default-terminal "screen-256color"
 set -g default-command "reattach-to-user-namespace -l zsh"
 
-set -g history-limit 100000
+unbind C-b
+set-option -g prefix C-a
+bind-key C-a send-prefix
 
-set -g mode-mouse on
-setw -g mouse-select-window on
-setw -g mouse-select-pane on
+set -g history-limit 100000
 
 setw -g mode-keys vi
 bind ` copy-mode
@@ -21,6 +21,11 @@ bind H resize-pane -L 5
 bind J resize-pane -D 5
 bind K resize-pane -U 5
 bind L resize-pane -R 5
+
+bind -n M-h select-pane -L
+bind -n M-l select-pane -R
+bind -n M-j select-pane -U
+bind -n M-k select-pane -D
 
 bind-key | split-window -h
 bind-key - split-window -v

@@ -72,6 +72,7 @@ noremap <leader>y "*y
 noremap <leader>yy "*Y
 noremap <leader>p :set paste<cr>:put  *<cr>:set nopaste<cr>
 nnoremap <c-n> :NERDTreeToggle<cr>
+nnoremap <leader>l :set relativenumber!<cr>
 nnoremap <leader>n :TagbarToggle<cr>
 
 " Vimscript file settings ----------------------- {{{

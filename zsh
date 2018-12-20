@@ -104,3 +104,7 @@ source /usr/local/bin/virtualenvwrapper_lazy.sh
 export K2PDFOPT="-ui- -dev k2 -m 1 -x -o %s_kindle -ow 10"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export ANDROID_NDK="$HOME/Library/Android/sdk/ndk-bundle"
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
