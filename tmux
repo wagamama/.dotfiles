@@ -9,9 +9,9 @@ bind ` copy-mode
 unbind [
 unbind p
 bind p paste-buffer
-bind -t vi-copy v begin-selection
-bind -t vi-copy y copy-selection
-bind -t vi-copy Escape cancel
+bind -T copy-mode-vi v send -X begin-selection
+bind -T copy-mode-vi y send -X copy-selection
+bind -T copy-mode-vi Escape send -X cancel
 bind y run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
 
 bind H resize-pane -L 5
