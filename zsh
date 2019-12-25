@@ -108,3 +108,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export ANDROID_NDK="$HOME/Library/Android/sdk/ndk-bundle"
 
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+export PATH="/usr/local/opt/opencv@3/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"

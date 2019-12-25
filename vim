@@ -12,6 +12,11 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'xolox/vim-misc'
 Plugin 'mileszs/ack.vim'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'elzr/vim-json'
+Plugin 'honza/vim-snippets'
+Plugin 'justinmk/vim-sneak'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'jelera/vim-javascript-syntax'
 Plugin 'Tagbar'
 
 call vundle#end()

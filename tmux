@@ -26,3 +26,9 @@ bind -n M-k select-pane -D
 
 bind-key | split-window -h
 bind-key - split-window -v
+
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+
+run -b '~/.tmux/plugins/tpm/tpm'
