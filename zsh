@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/bruce/.oh-my-zsh
+export ZSH=/Users/brucetsai/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -8,7 +8,7 @@ export ZSH=/Users/bruce/.oh-my-zsh
 ZSH_THEME="bruce"
 
 # Uncomment the following line to use case-sensitive completion.
- CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -26,7 +26,7 @@ ZSH_THEME="bruce"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
- COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -45,18 +45,19 @@ ZSH_THEME="bruce"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git svn osx brew python tmux docker gem npm node pip ruby vagrant \
-	virtualenv virtualenvwrapper brew-cask common-aliases)
+plugins=(git svn macos brew python pip virtualenv virtualenvwrapper common-aliases)
 
 # User configuration
 
 export PATH="$HOME/gst/cerbero/build/dist/darwin_x86_64/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
- export MANPATH="$HOME/gst/cerbero/build/dist/darwin_x86_64/man:/usr/local/man:$MANPATH"
+export MANPATH="$HOME/gst/cerbero/build/dist/darwin_x86_64/man:/usr/local/man:$MANPATH"
+
+ZSH_DISABLE_COMPFIX="true"
 
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
- export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -91,22 +92,30 @@ bindkey '^N' history-search-forward
 
 setopt AUTO_CD
 
-export HOMEBREW_GITHUB_API_TOKEN=dbc7f31795d0966e9bf517269ffb962f83835514
-export CC=cc
-export LC_ALL=en_US.UTF-8
+#export HOMEBREW_GITHUB_API_TOKEN=dbc7f31795d0966e9bf517269ffb962f83835514
+#export CC=cc
+#export LC_ALL=en_US.UTF-8
 
-alias ipynb='ipython notebook'
+#alias ipynb='ipython notebook'
+
+export PATH="/usr/local/opt/python@3.7/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/python@3.7/lib"
+export PKG_CONFIG_PATH="/usr/local/opt/python@3.7/lib/pkgconfig"
 
 export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/opt/python@3.7/bin/python3
 export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 
-export K2PDFOPT="-ui- -dev k2 -m 1 -x -o %s_kindle -ow 10"
+#export K2PDFOPT="-ui- -dev k2 -m 1 -x -o %s_kindle -ow 10"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-export ANDROID_NDK="$HOME/Library/Android/sdk/ndk-bundle"
+#export ANDROID_NDK="$HOME/Library/Android/sdk/ndk-bundle"
 
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-export PATH="/usr/local/opt/opencv@3/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
+#export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+#export PATH="/usr/local/opt/opencv@3/bin:$PATH"
+#export PATH="/usr/local/sbin:$PATH"
+
+alias ctags="`brew --prefix`/bin/ctags"
+alias ctags >> ~/.bash_profile
