@@ -3,7 +3,7 @@ function collapse_pwd {
 }
 
 function git_status {
-    [ $(current_branch) ] && echo "($(current_branch)$(git_prompt_status))"
+    [ $(git_current_branch) ] && echo "($(git_current_branch)$(git_prompt_status))"
 }
 
 function virtualenv_info {
