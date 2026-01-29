@@ -17,7 +17,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'justinmk/vim-sneak'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'Tagbar'
 
 call vundle#end()
 filetype plugin indent on
@@ -73,9 +72,11 @@ vnoremap // y/<c-r>"<cr>
 noremap <leader>y "*y
 noremap <leader>yy "*Y
 noremap <leader>p :set paste<cr>:put  *<cr>:set nopaste<cr>
-nnoremap <c-n> :NERDTreeToggle<cr>
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 nnoremap <leader>l :set relativenumber!<cr>
-nnoremap <leader>n :TagbarToggle<cr>
 
 " Vimscript file settings ----------------------- {{{
 augroup filetype_vim
