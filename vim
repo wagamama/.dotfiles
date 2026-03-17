@@ -64,18 +64,28 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 inoremap jk <esc>
 vnoremap jk <esc> 
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
+function! WinMove(key)
+    let t:curwin = winnr()
+    execute "wincmd " . a:key
+    if (t:curwin == winnr() && &filetype != 'nerdtree')
+        if (match(a:key, '[hl]') != -1)
+            execute "wincmd " . substitute(a:key, 'h', 'l', 'g')
+        else
+            execute "wincmd " . substitute(a:key, 'j', 'k', 'g')
+        endif
+    endif
+endfunction
+
+nnoremap <silent> <c-h> :call WinMove('h')<cr>
+nnoremap <silent> <c-j> :call WinMove('j')<cr>
+nnoremap <silent> <c-k> :call WinMove('k')<cr>
+nnoremap <silent> <c-l> :call WinMove('l')<cr>
 vnoremap // y/<c-r>"<cr>
 noremap <leader>y "*y
 noremap <leader>yy "*Y
 noremap <leader>p :set paste<cr>:put  *<cr>:set nopaste<cr>
-nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 nnoremap <leader>l :set relativenumber!<cr>
 
 " Vimscript file settings ----------------------- {{{
