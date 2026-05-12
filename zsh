@@ -111,8 +111,6 @@ source /usr/local/bin/virtualenvwrapper_lazy.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Added by Antigravity
-export PATH="/Users/bruce/.antigravity/antigravity/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 # bun completions
