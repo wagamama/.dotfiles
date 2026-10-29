@@ -130,3 +130,10 @@ fi
 
 # Ensure the agent knows about your macOS Keychain keys
 ssh-add --apple-load-keychain 2>/dev/null
+
+# Added by Antigravity CLI installer
+export PATH="/Users/bruce/.local/bin:$PATH"
+
+# API gateway CA trust
+export SSL_CERT_FILE="$HOME/.ssh/ca-bundle.pem"
+export REQUESTS_CA_BUNDLE="$HOME/.ssh/ca-bundle.pem"

@@ -2,7 +2,9 @@
 
 [appearance.themes]
 system_theme = false
-theme = { custom = { name = "Ghostty Solarized Dark Patched", path = "/Users/bruce/.warp/themes/ghostty-solarized-dark-patched.yaml" } }
+theme = {
+  custom = { name = "Ghostty Solarized Dark Patched", path = "ghostty-solarized-dark-patched.yaml" },
+}
 
 [appearance.vertical_tabs]
 enabled = true
@@ -14,6 +16,9 @@ primary_info = "command"
 [appearance.text]
 notebook_font_size = 14.0
 font_size = 13.0
+
+[appearance.tabs]
+preserve_active_tab_color = false
 
 [terminal]
 
@@ -27,14 +32,66 @@ cloud_conversation_storage_enabled = true
 is_any_ai_enabled = true
 
 [agents.warp_agent.input]
-nld_in_terminal_enabled = false
+nld_in_terminal_enabled = true
 
 [agents.warp_agent.other]
 show_agent_notifications = true
 show_conversation_history = true
+should_force_disable_cloud_handoff = true
 
 [agents.third_party]
 should_render_cli_agent_toolbar = true
+
+[agents.voice]
+voice_input_enabled = false
+
+[agents.execution_profiles]
+
+[agents.execution_profiles.default]
+apply_code_diffs = "agent_decides"
+ask_user_question = "ask_except_in_auto_approve"
+autosync_plans_to_warp_drive = true
+base_model = "37d9b103-84b7-4ae2-8811-5c977b0dfb9d"
+command_allowlist = []
+command_denylist = [
+  'bash(\s.*)?',
+  'fish(\s.*)?',
+  'pwsh(\s.*)?',
+  'sh(\s.*)?',
+  'zsh(\s.*)?',
+  'curl(\s.*)?',
+  'eval(\s.*)?',
+  'exec(\s.*)?',
+  'source(\s.*)?',
+  'wget(\s.*)?',
+  'dig(\s.*)?',
+  'nslookup(\s.*)?',
+  'host(\s.*)?',
+  'ssh(\s.*)?',
+  'scp(\s.*)?',
+  'rsync(\s.*)?',
+  'telnet(\s.*)?',
+  'rm(\s.*)?',
+]
+computer_use = "never"
+directory_allowlist = []
+execute_commands = "always_ask"
+mcp_allowlist = []
+mcp_denylist = []
+mcp_permissions = "agent_decides"
+name = "Default"
+read_files = "agent_decides"
+run_agents = "always_ask"
+web_search_enabled = true
+write_to_pty = "always_ask"
+
+[agents.custom_endpoints]
+
+[agents.custom_endpoints.legacy-48ab5295a0fc47109bce65ed]
+base_url = "https://trembling-juvenile-cupid.ngrok-free.dev/v1"
+models = [{ config_key = "37d9b103-84b7-4ae2-8811-5c977b0dfb9d", name = "gemma4:26b-mlx" }]
+name = "ollama"
+schema = "openai_chat_completions"
 
 [account]
 is_settings_sync_enabled = true
